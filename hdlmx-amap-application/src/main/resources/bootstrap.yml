@@ -1,0 +1,23 @@
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  application:
+    name: hdlmx-amap
+  profiles:
+    active: amap
+  cloud:
+    nacos:
+      config:
+        username: nacos
+        password: nacos
+        server-addr: localhost:8848
+        context-path: /nacos
+        group: hdlmx-app
+        file-extension: yaml
+        prefix: hdlmx
+      discovery:
+        username: nacos
+        password: nacos
+        server-addr: localhost:8848
+        group: hdlmx-app
